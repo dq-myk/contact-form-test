@@ -1,0 +1,98 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*1. デオフォルト非表示にする*/
+#modal {
+    display: none;
+}
+
+
+/*2. 内部リンククリックで適用する*/
+#modal:target {
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*3. メッセージBOX（テキスト部）*/
+#modal .message-box {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #8B7969;
+    padding: 20px;
+    height: 80px;
+    cursor: pointer;
+}
+
+/*4. 閉じる領域のためのアンカー*/
+#modal .close {
+    position: relative;
+    display: block;
+}
+
+/*5. 枠外の閉じる領域*/
+#modal .close::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: default;
+}
+
+
+/*6. 閉じるボタン*/
+#modal .close::after {
+    content: "x";
+    color: #8B7969;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 1;
+    border-radius: 50%;
+    border: 1px solid #8B7969;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

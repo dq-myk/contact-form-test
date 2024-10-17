@@ -1,0 +1,146 @@
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1512px;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header-utilities {
+    text-align: center;
+}
+
+.header__logo {
+    font-family: Inika;
+    color: #8B7969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: center;
+}
+
+.contact-form__content {
+    margin: 0 auto;
+    padding: 35px 95px;
+    max-width: 1512px;
+}
+
+.contact-form__heading {
+    font-family: Inika;
+    color: #8B7969;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    color: #8B7969;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__group-title {
+    font-size: 14px;
+}
+
+.form__group-radio {
+    margin-right: 360px;
+}
+
+.form__group-content--name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__label--required {
+    margin-left: 5px;
+    color: #ff9494;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--name input {
+    margin-left: 30px;
+    padding: 10px;
+    width: 285px;
+    height: 40px;
+    font-family: Inika;
+    background: #F4F4F4;
+    border: 1px solid #F4F4F4;
+
+    appearance: none;
+}
+
+.form__input--radio {
+    display: flex;
+    gap: 30px;
+    /* ラジオボタン同士に余白を追加 */
+    accent-color: #8B7969;
+}
+
+.form__input--radio label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* ラジオボタンとテキストの間に隙間 */
+}
+
+.form__input--tel input {
+    padding: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 180px;
+    height: 40px;
+    background: #F4F4F4;
+    border: 1px solid #F4F4F4;
+    font-family: Inika;
+    text-align: center;
+
+    appearance: none;
+}
+
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 600px;
+    height: 100px;
+    background: #F4F4F4;
+    border: 1px solid #F4F4F4;
+    font-family: Inika;
+
+    appearance: none;
+}
+
+.form__input--text input {
+    padding: 10px;
+    width: 600px;
+    height: 40px;
+    font-family: Inika;
+    background: #F4F4F4;
+    border: 1px solid #F4F4F4;
+
+    appearance: none;
+}
+
+.form__button {
+    margin-top: 30px;
+}
+
+.form__button-submit {
+    padding: 3px;
+    width: 15%;
+    height: 40px;
+    border: none;
+    background: #8B7969;
+    color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+.header {
+    background: #fff;
+}
+
+.header__inner {
+    margin: 0 auto;
+    padding: 35px 95px;
+    max-width: 1512px;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    font-family: Inika;
+    color: #8B7969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: center;
+}
+
+.header-nav__item {
+    width: 100px;
+    height: 34px;
+    background: #F0F0F099;
+    border: 1px solid #D9C6B5
+}
+
+.header-nav__link {
+    color: #D9C6B5;
+    text-decoration: none;
+}
