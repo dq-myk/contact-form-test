@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/common.css') }}">
-    @yield('css')
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,13 +25,12 @@
         </div>
     </header>
 
-@section('css')
+
 <link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
-@endsection
 
 <!--お問い合わせフォーム確認ページ-->
 
-@section('content')
+
 <div class="confirm__content">
     <div class="confirm__heading">
     <h2>Confirm</h2>
@@ -45,49 +43,67 @@
         <tr class="confirm-table__row">
             <th class="confirm-table__header">お名前</th>
             <td class="confirm-table__text">
-            <input type="text" name="name" value="{{ $contact['name'] }}" readonly />
+            <input type="text" name="name" value="{{ 'first_name' . '  ' . 'last_name' }}" readonly>
             </td>
         </tr>
+        <!--
+        <tr class="confirm-table__row">
+            <th class="confirm-table__header">お名前</th>
+            <td class="confirm-table__text">
+            <input type="text" name="name" value="{{ 'last_name' }}" readonly>
+            </td>
+        </tr>-->
+
+            @php
+            if ($gender === '0') {
+                $genderText = '男性';
+            } elseif ($gender === '1') {
+                $genderText = '女性';
+            } else {
+                $genderText = 'その他';
+            }
+            @endphp
+
         <tr class="confirm-table__row">
             <th class="confirm-table__header">性別</th>
             <td class="confirm-table__text">
-            <input type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
+            <input type="text" name="gender" value="{{ $genderText }}" readonly>
             </td>
         </tr>
         <tr class="confirm-table__row">
             <th class="confirm-table__header">メールアドレス</th>
             <td class="confirm-table__text">
-            <input type="email" name="email" value="{{ $contact['email'] }}" readonly />
+            <input type="email" name="email" value="{{ 'email' }}" readonly>
             </td>
         </tr>
         <tr class="confirm-table__row">
             <th class="confirm-table__header">電話番号</th>
             <td class="confirm-table__text">
-            <input type="tel" name="tel" value="{{ $contact['tel'] }}" readonly />
+            <input type="tel" name="tell" value="{{ 'tell' }}" readonly>
             </td>
         </tr>
         <tr class="confirm-table__row">
             <th class="confirm-table__header">住所</th>
             <td class="confirm-table__text">
-            <input type="text" name="address" value="{{ $contact['address'] }}" readonly />
+            <input type="text" name="address" value="{{ 'address' }}" readonly>
             </td>
         </tr>
         <tr class="confirm-table__row">
             <th class="confirm-table__header">建物名</th>
             <td class="confirm-table__text">
-            <input type="text" name="building" value="{{ $contact['building'] }}" readonly />
+            <input type="text" name="building" value="{{ 'building' }}" readonly>
             </td>
         </tr>
         <tr class="confirm-table__row">
             <th class="confirm-table__header">お問い合わせの種類</th>
             <td class="confirm-table__text">
-            <input type="text" name="category" value="{{ $category['id'] }}" readonly />
+            <input type="text" name="category" value="{{ $category }}" readonly>
             </td>
         </tr>
         <tr class="confirm-table__row">
             <th class="confirm-table__header">お問い合わせ内容</th>
             <td class="confirm-table__text">
-            <input type="text" name="content" value="{{ $contact['content'] }}" readonly />
+            <input type="text" name="content" value="{{ 'content' }}" readonly>
             </td>
         </tr>
         </table>
@@ -98,7 +114,5 @@
     </div>
     </form>
 </div>
-@endsection
-
 </body>
 </html>

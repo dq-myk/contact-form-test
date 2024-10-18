@@ -68,9 +68,9 @@
                 </div>
                 <div class="form__group-radio">
                     <div class="form__input--radio">
-                        <label><input type="radio" name="jender" value = "男性">男性</label>
-                        <label><input type="radio" name="jender" value = "女性">女性</label>
-                        <label><input type="radio" name="jender" value = "その他">その他</label>
+                        <label><input type="radio" name="gender" value = "0" required>男性</label>
+                        <label><input type="radio" name="gender" value = "1">女性</label>
+                        <label><input type="radio" name="gender" value = "2">その他</label>
                     </div>
 
                     <div class="form__error">
@@ -108,7 +108,7 @@
 
                 <div class="form__group-content">
                     <div class="form__input--tel">
-                        <input type="tel" name="tel" placeholder="080" value="{{ old('tel') }}" />  -  <input type="tel" name="tel" placeholder="1234" value="{{ old('tel') }}" />  -  <input type="tel" name="tel" placeholder="5678" value="{{ old('tel') }}" />
+                        <input type="tel" name="tell" placeholder="080" value="{{ old('tell') }}" />  -  <input type="tel" name="tell" placeholder="1234" value="{{ old('tell') }}" />  -  <input type="tel" name="tell" placeholder="5678" value="{{ old('tell') }}" />
                     </div>
                     <div class="form__error">
                         @error('tel')
