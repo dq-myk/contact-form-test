@@ -10,4 +10,19 @@ class ContactController extends Controller
     {
         return view('index');
     }
+
+    public function store(Request $request)
+    {
+        $contact = $request->only[
+            'first_name',
+            'last_name',
+            'gender',
+            'email',
+            'tell',
+            'address',
+            'building',
+            'detail'
+        ];
+        return redirect('/');
+    }
 }

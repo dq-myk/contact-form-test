@@ -1,7 +1,7 @@
 .header__inner {
     margin: 0 auto;
     padding: 20px 0;
-    max-width: 1512px;
+    width: 1250px;
     border-bottom: 1px solid #E0DFDE;
 }
 
@@ -22,8 +22,8 @@
 
 .contact-form__content {
     margin: 0 auto;
-    padding: 35px 95px;
-    max-width: 1512px;
+    padding: 20px;
+    width: 70%;
 }
 
 .contact-form__heading {
@@ -35,7 +35,6 @@
 
 .form {
     margin: 0 auto;
-    width: 80%;
     text-align: center;
     color: #8B7969;
 }
