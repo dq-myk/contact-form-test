@@ -2,12 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\MiddlewareController;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 
 
 
-Route::get('/', [ContactController::class, 'index'] );
+Route::middleware('auth')->group(function () {
+    Route::get('/', [ContactController::class, 'index']);
+});
 
 //Route::post('/contacts/confirm', [ContactController::class, 'confirm']);//
 

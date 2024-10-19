@@ -1,34 +1,22 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FashionablyLate</title>
+@extends('layouts.app')
 
-    <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inika&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-    <main>
-        <header class = "header">
-            <div class = "header__inner">
-                <div class = "header-utilities">
-                    <a class = "header__logo" href = "/">
-                        FashionablyLate
-                    </a>
-                </div>
-            </div>
-        </header>
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+@endsection
 
     <!--お問い合わせフォーム入力ページ-->
 
+
+<header class = "header">
+    <div class = "header__inner">
+        <div class = "header-utilities">
+            <a class = "header__logo" href = "/">
+                FashionablyLate
+            </a>
+        </div>
+    </div>
+</header>
+<main>
     <div class="contact-form__content">
         <div class="contact-form__heading">
             <h2>Contact</h2>
@@ -111,7 +99,7 @@
                         <input type="tel" name="tell" placeholder="080" value="{{ old('tell') }}" />  -  <input type="tel" name="tell" placeholder="1234" value="{{ old('tell') }}" />  -  <input type="tel" name="tell" placeholder="5678" value="{{ old('tell') }}" />
                     </div>
                     <div class="form__error">
-                        @error('tel')
+                        @error('tell')
                         {{ $message }}
                         @enderror
                     </div>
@@ -193,8 +181,7 @@
                         <button class="form__button-submit" type="submit">確認画面</button>
                     </div>
                 </div>
-            </form>
-        </div>
-    <main>
-</body>
-</html>
+            </div>
+        </form>
+    </div>
+</main>

@@ -17,26 +17,6 @@
 </head>
 
 <body>
-    <header class = "header">
-        <div class = "header__inner">
-            <div class = "header-utilities">
-                <a class = "header__logo" href = "/">
-                    FashionablyLate
-                </a>
-
-                <nav>
-                    <ul class = "header-nav">
-                        <li class = "header-nav__item">
-                            <a class = "header-nav__link" href = "/login">login</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        @yield('content')
-    </main>
+    @yield('content')
 </body>
 </html>

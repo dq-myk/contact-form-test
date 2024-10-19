@@ -1,0 +1,128 @@
+.header__inner {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 1250px;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin-left: 480px;
+}
+
+.header__link {
+    font-family: Inika;
+    color: #8B7969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.header-register__link {
+    color: #D9C6B5;
+    text-decoration: none;
+}
+
+.header-register__button {
+    font-family: Inika;
+    font-size: 20px;
+    margin-right: 100px;
+    padding: 5px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #D9C6B5;
+    background: #F0F0F0;
+    cursor: pointer;
+}
+
+.login__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1250px;
+}
+
+.login__heading h2 {
+    font-family: Inika;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    color: #8B7969;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login__content {
+    background-color: #ecddd0;
+}
+
+.form {
+    background-color: #fff;
+    margin: 50px auto 40px;
+    padding: 70px;
+    width: 740px;
+    height: 570px;
+    text-align: center;
+    border-radius:5px;
+}
+
+.login-table {
+    text-align: center;
+}
+
+.login-table__inner {
+    width: 100%;
+    margin-left: 80px;
+}
+
+.login-table__header {
+    padding: 5px;
+    font-family: Inika;
+    font-weight: 400;
+    line-height: 32px;
+    color: #8B7969;
+    text-align: left;
+}
+
+.login-table__text {
+    text-align: left;
+
+}
+
+.login-table__text input {
+    width: 450px;
+    height: 55px;
+    color: #BEB1A6;
+    font-family: Inika;
+    background: #F4F4F4;
+    border: 1px solid #F4F4F4;
+    margin-bottom: 30px;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__button {
+    margin: 50px 0;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 20%;
+    height: 40px;
+    border: none;
+    background: #82756A;
+    font-family: Inika;
+    color: #fff;
+    cursor: pointer;
+}
+
