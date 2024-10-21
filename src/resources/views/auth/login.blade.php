@@ -10,7 +10,7 @@
     <div class = "header__inner">
         <div class = "header-utilities">
             <div class = "header__logo">
-                <a class = "header__link" href = "/">FashionablyLate</a>
+                <h1>FashionablyLate</h1>
             </div>
 
             <div class = header-register>
@@ -28,7 +28,7 @@
             <h2>Login</h2>
         </div>
 
-        <form class = "form" action = "/login" method = "POST">
+        <form class = "form" action = "/login" method = "POST" novalidate>
             @csrf
             <div class = "login-table">
                 <table class = "login-table__inner">
@@ -37,30 +37,34 @@
                     </tr>
                     <tr class = "login-table__row">
                         <td class = "login-table__text">
-                            <input type = "email" name = "email" placeholder="例:test@example.com" value = "{{ 'email' }}" readonly>
+                            <input type = "email" name = "email" placeholder="例:test@example.com" >
                         </td>
                     </tr>
 
-                    <div class = "form__error">
-                        @error('email')
-                        {{ $message }}
-                        @enderror
-                    </div>
+                    <tr class = "login-table__row">
+                        <td class = "form__error">
+                            @error('email')
+                            {{ $message }}
+                            @enderror
+                        </td>
+                    </tr>
 
                     <tr class = "login-table__row">
                         <th class = "login-table__header">パスワード</th>
                     </tr>
                     <tr class = "login-table__row">
                         <td class = "login-table__text">
-                            <input type = "password" name= "password" placeholder="例:coachtech1106" value = "{{ 'password' }}" readonly>
+                            <input type = "password" name= "password" placeholder="例:coachtech1106">
                         </td>
                     </tr>
 
-                    <div class = "form__error">
-                        @error('password')
-                        {{ $message }}
-                        @enderror
-                    </div>
+                    <tr class = "login-table__row">
+                        <td class = "form__error">
+                            @error('password')
+                            {{ $message }}
+                            @enderror
+                        </td>
+                    </tr>
                 </table>
             </div>
 

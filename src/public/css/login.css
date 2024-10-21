@@ -1,6 +1,5 @@
 .header__inner {
     margin: 0 auto;
-    padding: 20px 0;
     max-width: 1250px;
     border-bottom: 1px solid #E0DFDE;
 }
@@ -15,7 +14,7 @@
     margin-left: 480px;
 }
 
-.header__link {
+.header__logo h1 {
     font-family: Inika;
     color: #8B7969;
     text-decoration: none;
@@ -98,14 +97,16 @@
 .login-table__text input {
     width: 450px;
     height: 55px;
+    margin-bottom: 5px;
+    padding-left: 20px;
     color: #BEB1A6;
     font-family: Inika;
     background: #F4F4F4;
     border: 1px solid #F4F4F4;
-    margin-bottom: 30px;
 }
 
 .form__error {
+    margin-bottom: 40px;
     height: 20px;
     color: #ff0000;
     text-align: left;

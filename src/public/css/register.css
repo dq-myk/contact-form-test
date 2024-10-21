@@ -1,0 +1,130 @@
+.header__inner {
+    margin: 0 auto;
+    max-width: 1250px;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header-utilities {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin-left: 480px;
+}
+
+.header__logo h1 {
+    font-family: Inika;
+    color: #8B7969;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.header-register__link {
+    color: #D9C6B5;
+    text-decoration: none;
+}
+
+.header-register__button {
+    font-family: Inika;
+    font-size: 20px;
+    margin-right: 100px;
+    padding: 5px;
+    width: 100px;
+    height: 35px;
+    border: 1px solid #D9C6B5;
+    background: #F0F0F0;
+    cursor: pointer;
+}
+
+.register__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1250px;
+}
+
+.register__heading h2 {
+    font-family: Inika;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    color: #8B7969;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register__content {
+    background-color: #ecddd0;
+}
+
+.form {
+    background-color: #fff;
+    margin: 50px auto 40px;
+    padding: 70px;
+    width: 740px;
+    height: 650px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.register-form {
+    text-align: center;
+}
+
+.register-form__inner {
+    width: 100%;
+    margin-left: 80px;
+}
+
+.register-form-title {
+    padding: 5px;
+    font-family: Inika;
+    font-weight: 400;
+    line-height: 32px;
+    color: #8B7969;
+    text-align: left;
+}
+
+.form__input--text {
+    text-align: left;
+
+}
+
+.form__input--text input {
+    width: 450px;
+    height: 55px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    color: #BEB1A6;
+    font-family: Inika;
+    background: #F4F4F4;
+    border: 1px solid #F4F4F4;
+}
+
+.form__error {
+    margin-bottom: 20px;
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.register__button {
+    margin: 50px 0;
+}
+
+.register__button-submit {
+    padding: 10px;
+    width: 20%;
+    height: 40px;
+    border: none;
+    font-family: Inika;
+    color: #fff;
+    background: #82756A;
+
+    cursor: pointer;
+}
+

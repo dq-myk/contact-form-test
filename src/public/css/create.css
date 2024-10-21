@@ -1,0 +1,30 @@
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination a,
+.pagination span {
+    display: block;
+    padding: 12px 12px;
+    border: 1px solid #ddd;
+    font-family: Inika;
+    text-decoration: none;
+    color: #8B7969;
+}
+
+.pagination .active span {
+    background-color: #8C7B6B;
+    /* 画像のような茶色 */
+    color: white;
+    font-weight: bold;
+}
+
+.pagination .disabled span {
+    color: #ccc;
+}
+
+.pagination a:hover {
+    background-color: #f0f0f0;
+}

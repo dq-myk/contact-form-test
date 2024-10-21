@@ -9,87 +9,98 @@
 <header class = "header">
     <div class = "header__inner">
         <div class = "header-utilities">
-            <a class = "header__logo" href = "/">
-                FashionablyLate
-            </a>
+            <div class = "header__logo">
+                <h1>FashionablyLate</h1>
+            </div>
 
-            <nav>
-                <ul class = "header-nav">
-                    <li class = "header-nav__item">
-                        <a class = "header-nav__link" href = "/login"></a>
-                    </li>
-                </ul>
-            </nav>
+            <div class = header-login>
+            <button class = "header-register__button">
+                <a class = "header-register__link" href = "/login">login</a>
+            </button>
+            </div>
         </div>
     </div>
 </header>
 
 
 <main>
-    <div class = "contact-form__content">
-        <div class = "contact-form__heading">
+    <div class = "register__content">
+        <div class = "register__heading">
             <h2>Register</h2>
         </div>
 
-        <form class = "form" action = "/register" method = "POST">
+        <form class = "form" action = "/register" method = "POST" novalidate>
             @csrf
-            <div class = "form__group">
-                <div class = "form__group-title">
-                    <span class = "form__label--item">お名前</span>
-                </div>
-
-                <div class = "form__group-content">
-                    <div class = "form__input--text">
-                        <input type = "text" name= "name" placeholder = "例:山田  太郎" value = "{{ old('name') }}">
+            <div class = "register-form">
+                <div class = "register-form__inner">
+                    <div class = "register-form-title">
+                        <span class = "form__label--item">お名前</span>
                     </div>
 
-                    <div class = "form__error">
-                        @error('name')
-                        {{ $message }}
-                        @enderror
-                    </div>
-                </div>
-            </div>
+                    <div class = "register-form-content">
+                        <div class = "form__input--text">
+                            <input type = "text" name= "name" placeholder = "例:山田  太郎" value = "{{ old('name') }}">
+                        </div>
 
-            <div class = "form__group">
-                <div class = "form__group-title">
-                    <span class = "form__label--item">メールアドレス</span>
-                </div>
-
-                <div class = "form__group-content">
-                    <div class = "form__input--text">
-                        <input type = "email" name= "email" placeholder = "test@example.com" value = "{{ old('email') }}">
-                    </div>
-
-                    <div class = "form__error">
-                        @error('email')
-                        {{ $message }}
-                        @enderror
+                        <div class = "form__error">
+                            @error('name')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class = "form__group">
-                <div class = "form__group-title">
-                    <span class = "form__label--item">パスワード</span>
-                </div>
-
-                <div class = "form__group-content">
-                    <div class = "form__input--text">
-                        <input type = "password" name= "password">
+            <div class = "register-form">
+                <div class = "register-form__inner">
+                    <div class = "register-form-title">
+                        <span class = "form__label--item">メールアドレス</span>
                     </div>
 
-                    <div class = "form__error">
-                        @error('password')
-                        {{ $message }}
-                        @enderror
+                    <div class = "register-form-content">
+                        <div class = "form__input--text">
+                            <input type = "email" name= "email" placeholder = "例:test@example.com" value = "{{ old('email') }}">
+                        </div>
+
+                        <div class = "form__error">
+                            @error('email')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class = "form__button">
-                <button class = "form__button-submit" type = "submit">登録</button>
+            <div class = "register-form">
+                <div class = "register-form__inner">
+                    <div class = "register-form-title">
+                        <span class = "form__label--item">パスワード</span>
+                    </div>
+
+                    <div class = "register-form-content">
+                        <div class = "form__input--text">
+                            <input type = "password" name= "password" placeholder="例:coachtech1106">
+                        </div>
+
+                        <div class = "form__error">
+                            @error('password')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!--
+            <div class = "register__button">
+                <button class = "register__button-submit" type = "submit">
+                    <a class = "register__button-link" href = "/login">登録</a>
+                </button>
+            </div>-->
+
+            <div class = "register__button">
+            <button class = "register__button-submit" type = "submit">登録</button>
+        </div>
         </form>
     </div>
 </main>
