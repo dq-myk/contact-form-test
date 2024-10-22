@@ -30,6 +30,19 @@ class UserController extends Controller
             return view('admin', compact('contacts'));
         }
 
+        public function adminView()
+        {
+            // Contact で Category の情報を取得
+            $contacts = Contact::with('category')->get();
+            $categories = Category::all();
+
+            return view('admin', compact('contacts', 'categories'));
+        }
+
+
+
+
+
 
     /*public function index()
     {
@@ -50,7 +63,7 @@ class UserController extends Controller
         return redirect()->route('login');
     }*/
 
-    
+
 
     /*public function index()
     {

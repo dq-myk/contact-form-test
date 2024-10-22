@@ -11,4 +11,10 @@ class Category extends Model
 
     protected $fillable = ['content'];
 
+    // Contact とのリレーション (1対多)
+    public function contacts()
+    {
+        return $this->hasMany(Contact::class);
+    }
+
 }

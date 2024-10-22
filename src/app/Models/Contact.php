@@ -21,4 +21,10 @@ class Contact extends Model
         'detail'
     ];
 
+    // Category とのリレーション (1対1)
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
 }
