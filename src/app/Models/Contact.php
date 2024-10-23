@@ -27,4 +27,29 @@ class Contact extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function scopeKeywordSearch($query, $keyword)
+    {
+        if (!empty($keyword) && empty($gender) && empty($category_id)) {
+            $query->where(function ($subQuery) use ($keyword) {
+                    $subQuery->where('first_name', 'like', '%' . $keyword . '%')
+                        ->orWhere('last_name', 'like', '%' . $keyword . '%')
+                        ->orWhere('email', 'like', '%' . $keyword . '%');
+                });
+        }
+    }
+
+    public function scopeGenderSearch($query, $gender)
+    {
+        if (!empty($gender) && empty($keyword) && empty($category_id)) {
+            $query->where('gender', $gender);
+        }
+    }
+
+    public function scopeCategorySearch($query, $category_id)
+    {
+        if (!empty($category_id) && empty($keyword) && empty($gender)) {
+            $query->where('category_id', $category_id);
+        }
+    }
+
 }

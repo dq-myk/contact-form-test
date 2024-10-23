@@ -19,9 +19,10 @@
             </div>
 
             <div class = header-logout>
-                <button class = "header-logout__button">
-                    <a class = "header-logout__link" href = "/login">logout</a>
-                </button>
+                <form class = "form" action = "{{ route('logout') }}" method = "POST">
+                @csrf
+                    <button class = "header-logout__button">logout</button>
+                </form>
             </div>
         </div>
     </div>
@@ -33,44 +34,30 @@
 </div>
 
 <main>
-    <form class = "search-form" action = "/admin" method = "GET">
+    <form class = "search-form" action = "/admin/search" method = "GET">
         @csrf
         <div class = "search-form__group">
-            <div class = "search-form__innner">
+            <div class = "search-form__inner">
                 <div class ="search-form__item">
-                    <input class ="search-form__item-input" type = "text" name = "keyword" value = "名前やメールアドレスを入力して下さい">
+                    <input class ="search-form__item-input" type = "text" name = "keyword" placeholder= "名前やメールアドレスを入力して下さい" value = "">
                 </div>
 
                 <div>
                     <select class = "search-form__item-gender" name="gender">
-                        <option value = "">性別</option>
-                        @foreach ($contacts as $contact)
-
-                        @php
-                        switch ((int) $contact->gender) {
-                        case 0:
-                            $genderText = '男性';
-                            break;
-                        case 1:
-                            $genderText = '女性';
-                            break;
-                        case 2:
-                            $genderText = 'その他';
-                            break;
-                        }
-                        @endphp
-
-                            <option value = "{{ 'genderText' }}"></option>
-                        @endforeach
+                        <option value ="">性別</option>
+                        <option  value = "">全て</option>
+                        <option value = "0">男</option>
+                        <option value = "1">女</option>
+                        <option value = "2">その他</option>
                     </select>
                 </div>
 
                 <div class ="search-form__item-category">
-                    <select class = "search-form__item-category">
+                    <select class = "search-form__item-category" name="category_id">
                         <option value = "">お問い合わせの種類</option>
-
-                        <option value = "{{ 'id' }}"></option>
-
+                        @foreach($categories as $category)
+                        <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                        @endforeach
                     </select>
                 </div>
 
@@ -84,7 +71,7 @@
             </div>
 
             <div class = "reset-form__button">
-                <button class = "reset__button-submit" type = "submit">リセット</button>
+                <button class = "reset__button-submit" type = "reset">リセット</button>
             </div>
         </div>
     </form>

@@ -31,14 +31,14 @@ class ContactRequest extends FormRequest
             'tell' => ['required', 'string', 'max:255'],
             'address' => ['required', 'string', 'max:255', 'regex:/^[0-9]{1,5}$/'],
             'building' => ['string', 'max:255'],
-            'detail' => ['required', 'text', 'max:120'],
+            'detail' => ['required', 'string', 'max:120'],
         ];
     }
 
     public function messages()
     {
         return [
-            'first_name.required' => '姓を入力してください',
+            'first_name.required' => '氏名を入力してください',
             'last_name.required' => '名を入力してください',
             'gender.required' => '性別を選択してください',
             'email.required' => 'メールアドレスを入力してください',

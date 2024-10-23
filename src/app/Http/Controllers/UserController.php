@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\UserRequest;
 use App\Models\User;
 use App\Models\Contact;
+use App\Models\Category;
+
 
 class UserController extends Controller
 {
@@ -27,17 +29,23 @@ class UserController extends Controller
     public function admin()
         {
             $contacts = Contact::Paginate(7);
-            return view('admin', compact('contacts'));
-        }
-
-        public function adminView()
-        {
-            // Contact で Category の情報を取得
-            $contacts = Contact::with('category')->get();
             $categories = Category::all();
 
             return view('admin', compact('contacts', 'categories'));
         }
+
+    //検索機能の実装
+    public function search(Request $request)
+    {
+        $contacts = Contact::with('category')
+            ->KeywordSearch($request->keyword)
+            ->GenderSearch($request->gender)
+            ->CategorySearch($request->category_id)
+            ->paginate(7);
+        $categories = Category::all();
+
+        return view('admin', compact('contacts', 'categories'));
+    }
 
 
 

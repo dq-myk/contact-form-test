@@ -24,7 +24,7 @@
     line-height: 50px;
 }
 
-.header-logout__link {
+.header-logout__button {
     color: #D9C6B5;
     text-decoration: none;
 }
@@ -65,7 +65,7 @@
     justify-content: space-between;
 }
 
-.search-form__innner {
+.search-form__inner {
     width: 920px;
     display: flex;
     align-items: center;
@@ -76,7 +76,7 @@
     width: 350px;
     height: 50px;
     text-align: center;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 25px;
     color: #BEB1A6;
@@ -88,7 +88,7 @@
     width: 110px;
     height: 50px;
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 22px;
     color: #BEB1A6;
@@ -101,7 +101,7 @@
     width: 200px;
     height: 50px;
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 22px;
     color: #BEB1A6;

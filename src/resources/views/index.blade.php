@@ -24,7 +24,6 @@
 
         <form class="form" action="contacts/confirm" method="post" novalidate>
         @csrf
-
             <div class="form__group">
                 <div class="form__group-title">
                     <span class="form__label--item">お名前</span>
@@ -41,8 +40,8 @@
                         </div>
                     </div>
 
-                    <div class="form__error">
-                        @error('last_name')
+                    <div class="name-form__error">
+                        @error('first_name')
                         {{ $message }}
                         @enderror
                     </div>
@@ -149,7 +148,12 @@
 
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type = "text" name = "category" placeholder="選択してください" value ="{{ old('category') }}">
+                        <select class = "form__item-category" name="category_id">
+                            <option value = "">お問い合わせの種類</option>
+                            @foreach($categories as $category)
+                            <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="form__error">

@@ -43,6 +43,7 @@
 }
 
 .form__group {
+    padding: 0 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -65,7 +66,16 @@
     color: #ff9494;
 }
 
+.name-form__error{
+    margin-bottom: 20px;
+    padding-left: 25px;
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
 .form__error {
+    margin-bottom: 20px;
     height: 20px;
     color: #ff0000;
     text-align: left;
@@ -133,13 +143,28 @@
     appearance: none;
 }
 
+.form__item-category {
+    padding: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 600px;
+    height: 40px;
+    background: #F4F4F4;
+    border: 1px solid #F4F4F4;
+    font-family: Inika;
+    color: #81807f;
+    text-align: left;
+
+    appearance: none;
+}
+
 .form__button {
     margin-top: 30px;
 }
 
 .form__button-submit {
     padding: 3px;
-    width: 15px;
+    width: 80px;
     height: 40px;
     border: none;
     background: #8B7969;
