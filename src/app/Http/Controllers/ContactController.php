@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log; // ここを追加
 use App\Http\Requests\ContactRequest;
 use App\Http\Controllers\UserController;
 use App\Models\Contact;
@@ -33,7 +34,12 @@ class ContactController extends Controller
         'first_name', 'last_name', 'gender', 'email', 'address', 'building', 'detail'
     ]);
         Contact::create($contact);
-        return view('thanks');
+        return view('contacts');
     }
+
+    /*public function show()
+    {
+        return view('thanks');
+    }*/
 
 }

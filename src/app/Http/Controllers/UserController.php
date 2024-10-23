@@ -41,40 +41,19 @@ class UserController extends Controller
             ->KeywordSearch($request->keyword)
             ->GenderSearch($request->gender)
             ->CategorySearch($request->category_id)
+            ->DateSearch($request->date)
             ->paginate(7);
         $categories = Category::all();
 
         return view('admin', compact('contacts', 'categories'));
     }
 
-
-
-
-
-
-    /*public function index()
+    //Contactの削除
+    public function destroy(Request $request)
     {
-        return view('/admin');
-    }*/
+        Contact::find($request->id)->delete();
 
+        return redirect('/admin');
+    }
 
-    /*public function show()
-    {
-        return view('auth.register');
-    }*/
-
-    /*public function register(UserRequest $request)
-    {
-        $user = $request->all();
-        User::create($user);
-
-        return redirect()->route('login');
-    }*/
-
-
-
-    /*public function index()
-    {
-        return view('/admin');
-    }*/
 }

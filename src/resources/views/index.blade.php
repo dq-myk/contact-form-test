@@ -22,7 +22,7 @@
             <h2>Contact</h2>
         </div>
 
-        <form class="form" action="contacts/confirm" method="post" novalidate>
+        <form class="form" action = "/contacts/confirm" method="POST" novalidate>
         @csrf
             <div class="form__group">
                 <div class="form__group-title">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="form__group-radio">
                     <div class="form__input--radio">
-                        <label><input type="radio" name="gender" value = "0" required>男性</label>
+                        <label><input type="radio" name="gender" value = "0">男性</label>
                         <label><input type="radio" name="gender" value = "1">女性</label>
                         <label><input type="radio" name="gender" value = "2">その他</label>
                     </div>

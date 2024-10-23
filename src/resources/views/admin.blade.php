@@ -46,8 +46,8 @@
                     <select class = "search-form__item-gender" name="gender">
                         <option value ="">性別</option>
                         <option  value = "">全て</option>
-                        <option value = "0">男</option>
-                        <option value = "1">女</option>
+                        <option value = "0">男性</option>
+                        <option value = "1">女性</option>
                         <option value = "2">その他</option>
                     </select>
                 </div>
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class ="search-form__item-date">
-                    <input class = "search-date" name="date" type="date" value = "年/月/日">
+                    <input class = "search-date" name="date" type="date" placeholder="年/月/日">
                 </div>
             </div>
 
@@ -126,7 +126,7 @@
                     </div>
 
                     <div class = "admin-form__item">
-                        <p class = "admin-form__item-p">{{ $contact->email }}</p>
+                        <p class = "admin-form__item-p">{{ $contact['email'] }}</p>
                     </div>
 
                     <div class = "admin-form__item">
@@ -148,84 +148,90 @@
         <div class="message-wrapper">
             <a href="#" class="close"></a>
             <div class="message-box">
-                <table class = "modal-table__inner">
-                    <tr class = "modal-table__row">
-                        <th>
-                            <div class = "modal-form__item">
-                                <p class = "modal-table__header">お名前</p>
-                            </div>
+                    <table class = "modal-table__inner">
+                        @if (isset($contact))
+                            <tr class = "modal-table__row">
+                                <th>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-table__header">お名前</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-table__header">性別</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-table__header">性別</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-table__header">メールアドレス</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-table__header">メールアドレス</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-table__header">電話番号</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-table__header">電話番号</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-table__header">住所名</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-table__header">住所名</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-table__header">建物名</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-table__header">建物名</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-table__header">お問い合わせの種類</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-table__header">お問い合わせの種類</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-table__header">お問い合わせの内容</p>
-                            </div>
-                        </th>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-table__header">お問い合わせの内容</p>
+                                    </div>
+                                </th>
 
-                        <td class = "modal-table__item">
-                            <div class = "modal-form__item">
-                                <p class = "modal-form__item-p">{{ 'name' }}</p>
-                            </div>
+                                <td class = "modal-table__item">
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-form__item-p">{{ $contact['last_name'] . '  ' . $contact['first_name'] }}</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-form__item-p">{{ 'jender' }}</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-form__item-p">{{ $genderText }}</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-form__item-p">{{ 'email' }}</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-form__item-p">{{ $contact['email'] }}</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-form__item-p">{{ 'tell' }}</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-form__item-p">{{ $contact['tell'] }}</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-form__item-p">{{ 'address' }}</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-form__item-p">{{ $contact['address'] }}</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-form__item-p">{{ 'building' }}</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-form__item-p">{{ $contact['building'] }}</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-form__item-p">{{ 'category' }}</p>
-                            </div>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-form__item-p">{{ $category['content'] }}</p>
+                                    </div>
 
-                            <div class = "modal-form__item">
-                                <p class = "modal-form__item-p">{{ 'detail' }}</p>
-                            </div>
-                        </td>
-                </table>
+                                    <div class = "modal-form__item">
+                                        <p class = "modal-form__item-p">{{ $contact['detail'] }}</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        @endif
+                    </table>
 
 
                 <form class = "delete-form" action = "/contacts/delete" method = "POST">
                     @method('DELETE')
                     @csrf
-                    <div class = "delete-form__button">
-                        <button class = "delete-form__button-submit" type = "submit">削除</button>
-                    </div>
+                    @if (isset($contact))
+                        <div class = "delete-form__button">
+                            <input type = "hidden" name = "id" value = "{{ $contact['id'] }}">
+                            <button class = "delete-form__button-submit" type = "submit">削除</button>
+                        </div>
+                    @endif
                 </form>
             </div>
         </div>
